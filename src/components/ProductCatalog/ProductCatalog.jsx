@@ -20,7 +20,6 @@ function ProductCatalog() {
   const debouncedFilters = useDebounce(filters, 300);
   const {isLoading, response: products} = useProducts(debouncedFilters)
 
-  // Update filters based on user input
   const updateFilter = (key, value) => {
     setFilters((prevFilters) => {
       const temp = ({ ...prevFilters, [key]: value });
